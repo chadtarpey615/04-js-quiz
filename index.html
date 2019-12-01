@@ -15,10 +15,16 @@
   <div class="w-100 vh-100  d-flex justify-content-center">
     <div class="container-fluid h-100">
       <div class="row h-100">
-        <div class="col-sm-8 quiz-col mx-auto h-50" id="start-container">
-          <button class="btn btn-primary btn-lg" id="start-btn">Start Quiz</button>
+        <div class="col-sm-8 quiz-col mx-auto h-25" id="start-container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="mb-3">You will have 10 second to answer each question</h2>
+              <button class="btn btn-primary btn-lg mx-auto" id="start-btn">Start Quiz</button>
+            </div>
+          </div>
+
         </div>
-        <div class="col-sm-8 quiz-col mx-auto h-50 d-none" id="quiz-container">
+        <div class="col-sm-8 quiz-col mx-auto h-75 d-none" id="quiz-container">
           <div class="row">
             <div class="col-sm-4 mb-2 mx-auto">
               <img class="img-fluid" id="quiz-img" src="" alt="">
@@ -31,13 +37,13 @@
           </div>
           <div class="row d-flex justify-content-center">
             <div class="col-sm-3 choice-col">
-              <a class="choice" id="choice-a"></a>
+              <a class="choice" id="choice-a" onclick="checkAnswer('A')"></a>
             </div>
             <div class="col-sm-3 choice-col">
-              <a class="choice" id="choice-b"></a>
+              <a class="choice" id="choice-b" onclick="checkAnswer('B')"></a>
             </div>
             <div class="col-sm-3 choice-col">
-              <a class="choice" id="choice-c"></a>
+              <a class="choice" id="choice-c" onclick="checkAnswer('C')"></a>
             </div>
           </div>
           <div class="row d-flex justify-content-space-between">
@@ -47,8 +53,15 @@
                 <div id="timeGauge"></div>
             </div>
             <div id="progress"></div>
-             <div class="d-none score-container" id="score-container"></div>
           </div>
+        </div>
+        <div class="col-sm-8 quiz-col mx-auto h-25 d-none" id="score">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="mb-3" id="score-content"></h2>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

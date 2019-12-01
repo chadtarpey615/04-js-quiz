@@ -23,6 +23,14 @@ body {
   margin: 0 1rem;
 }
 
+.correct {
+  background-color: #0f0;
+}
+
+.incorrect {
+  background-color: #f00;
+}
+
 #timer{
     position: absolute;
     height : 100px;
