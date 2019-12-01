@@ -66,9 +66,19 @@ start.addEventListener("click",startQuiz);
 function startQuiz(){
     startContainer.classList.add('d-none');
     quiz.classList.remove('d-none');
-    // renderQuestion();
-    // quiz.style.display = "block";
+    renderQuestion();
     // renderProgress();
     // renderCounter();
     // TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+}
+
+// render a question
+function renderQuestion(){
+    var q = questions[runningQuestion];
+
+    question.innerHTML = q.question;
+    qImg.src = q.imgSrc;
+    choiceA.textContent = q.choiceA;
+    choiceB.textContent = q.choiceB;
+    choiceC.textContent = q.choiceC;
 }
