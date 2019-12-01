@@ -51,7 +51,9 @@ var start = document.getElementById('start-btn'),
     timeGauge = document.getElementById('timeGauge'),
     progress = document.getElementById('progress'),
     scoreDiv = document.getElementById('score'),
-    scoreContent = document.getElementById('score-content');
+    scoreContent = document.getElementById('score-content'),
+    submitBtn = document.getElementById('submit-score'),
+    userName = document.getElementById('user-name').value,
     runningQuestion = 0,
     count = 0,
     questionTime = 10, // 10s
@@ -60,10 +62,6 @@ var start = document.getElementById('start-btn'),
     gaugeUnit = gaugeWidth / questionTime,
     score = 0;
 let TIMER;
-
-
-
-
 
 start.addEventListener("click",startQuiz);
 
@@ -96,7 +94,6 @@ function renderProgress(){
 }
 
 // counter render
-
 function renderCounter(){
     if(count <= questionTime){
         counter.textContent = count;
@@ -118,7 +115,6 @@ function renderCounter(){
 }
 
 // checkAnwer
-
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
         // answer is correct
@@ -159,5 +155,11 @@ function scoreRender(){
     // calculate the amount of question percent answered by the user
     var scorePerCent = Math.round(100 * score/questions.length);
 
-    scoreContent.textContent = 'You scored ' + scorePerCent +'!'
+    scoreContent.textContent = 'You scored ' + scorePerCent +'%!'
 }
+
+submitBtn.addEventListener('click', function(event) {
+  event.prevendDefault;
+  // localStorage.setItem(userName, scorePerCent);
+  window.location.href = 'high-scores.html';
+})

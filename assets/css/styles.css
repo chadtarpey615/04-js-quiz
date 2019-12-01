@@ -21,7 +21,16 @@ body {
   border: 1px solid black;
   box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   margin: 0 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
+
+.choice{
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+
 
 .correct {
   background-color: #0f0;

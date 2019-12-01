@@ -48,20 +48,28 @@
           </div>
           <div class="row d-flex justify-content-space-between">
             <div id="timer">
-                <div id="counter"></div>
-                <div id="btimeGauge"></div>
-                <div id="timeGauge"></div>
+              <div id="counter"></div>
+              <div id="btimeGauge"></div>
+              <div id="timeGauge"></div>
             </div>
             <div id="progress"></div>
           </div>
         </div>
-        <div class="col-sm-8 quiz-col mx-auto h-25 d-none" id="score">
+        <div class="col-sm-8 quiz-col h-50 mx-auto d-none" id="score">
           <div class="row">
             <div class="col-sm-12 text-center">
               <h2 class="mb-3" id="score-content"></h2>
             </div>
+            <div class="col-sm-6 mx-auto text-center">
+              <p class="lead">Enter your name to record your score!</p>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter your initials" id="user-name">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="submit-score">Submit</button>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
