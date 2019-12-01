@@ -1,5 +1,6 @@
 // global variables
 var start = document.getElementById('start-btn'),
+    startContainer = document.getElementById('start-container');
     quiz = document.getElementById('quiz-container'),
     question = document.getElementById('question'),
     qImg = document.getElementById('quiz-img'),
@@ -9,10 +10,18 @@ var start = document.getElementById('start-btn'),
     counter = document.getElementById('counter'),
     timeGauge = document.getElementById('timeGauge'),
     progress = document.getElementById('progress'),
-    scoreDiv = document.getElementById('score-container');
+    scoreDiv = document.getElementById('score-container')
+    // lastQuestion = questions.length - 1;
+    runningQuestion = 0,
+    count = 0,
+    questionTime = 10, // 10s
+    gaugeWidth = 150, // 150px
+    gaugeUnit = gaugeWidth / questionTime,
+    score = 0;
+let TIMER;
 
     // create our questions
-let questions = [
+var questions = [
   {
     question : 'Who is this former Jedi Grand Master',
     imgSrc : 'assets/images/yoda.jpg',
@@ -50,3 +59,16 @@ let questions = [
     correct : 'C'
   }
 ];
+
+start.addEventListener("click",startQuiz);
+
+// start quiz
+function startQuiz(){
+    startContainer.classList.add('d-none');
+    quiz.classList.remove('d-none');
+    // renderQuestion();
+    // quiz.style.display = "block";
+    // renderProgress();
+    // renderCounter();
+    // TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+}
