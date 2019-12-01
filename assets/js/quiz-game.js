@@ -54,6 +54,7 @@ var start = document.getElementById('start-btn'),
     scoreContent = document.getElementById('score-content'),
     submitBtn = document.getElementById('submit-score'),
     userName = document.getElementById('user-name').value,
+    highScoreDiv = document.getElementById('high-score-container')
     runningQuestion = 0,
     count = 0,
     questionTime = 10, // 10s
@@ -160,6 +161,8 @@ function scoreRender(){
 
 submitBtn.addEventListener('click', function(event) {
   event.prevendDefault;
-  // localStorage.setItem(userName, scorePerCent);
-  window.location.href = 'high-scores.html';
+  localStorage.setItem(userName, scorePerCent);
+  scoreDiv.classList.add('d-none');
+  highScoreDiv.classList.remove('d-none');
+
 })
