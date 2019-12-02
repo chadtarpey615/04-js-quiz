@@ -161,7 +161,7 @@ function scoreRender(){
 
 submitBtn.addEventListener('click', function(event) {
   event.prevendDefault;
-  localStorage.setItem(userName, scorePerCent);
+  // localStorage.setItem(userName, scorePerCent);
   scoreDiv.classList.add('d-none');
   highScoreDiv.classList.remove('d-none');
 
