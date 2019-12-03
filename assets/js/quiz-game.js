@@ -5,7 +5,7 @@ var questions = [
     imgSrc : 'assets/images/yoda.jpg',
     choiceA : 'Yoda',
     choiceB : 'Mace Windu',
-    choiceC : 'Yattle',
+    choiceC : 'Yaddle',
     correct : 'A'
   },{
     question : "Who was Darth Sidious' master?",
