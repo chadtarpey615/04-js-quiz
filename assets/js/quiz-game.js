@@ -53,7 +53,8 @@ var start = document.getElementById('start-btn'),
     scoreDiv = document.getElementById('score'),
     scoreContent = document.getElementById('score-content'),
     submitBtn = document.getElementById('submit-score'),
-    userName = document.getElementById('user-name').value,
+    userName = document.getElementById('user-name'),
+    userScore = 0,
     highScoreDiv = document.getElementById('high-score-container')
     runningQuestion = 0,
     count = 0,
@@ -156,11 +157,21 @@ function scoreRender(){
     // calculate the amount of question percent answered by the user
     var scorePerCent = Math.round(100 * score/questions.length);
 
-    scoreContent.textContent = 'You scored ' + scorePerCent +'%!'
+    scoreContent.textContent = 'You scored ' + scorePerCent +'%!';
+
+    scorePerCent = userScore;
 }
 
 submitBtn.addEventListener('click', function(event) {
   event.prevendDefault;
+
+  var user = {
+    userName: userName.value.trim(),
+    score: userScore
+  };
+
+  console.log(user);
+
   // localStorage.setItem(userName, scorePerCent);
   scoreDiv.classList.add('d-none');
   highScoreDiv.classList.remove('d-none');
