@@ -160,6 +160,8 @@ function scoreRender(){
     scoreContent.textContent = 'You scored ' + scorePerCent +'%!';
 
     scorePerCent = userScore;
+
+    console.log(userScore);
 }
 
 submitBtn.addEventListener('click', function(event) {
