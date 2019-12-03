@@ -155,11 +155,9 @@ function scoreRender(){
     scoreDiv.classList.remove('d-none');
 
     // calculate the amount of question percent answered by the user
-    var scorePerCent = Math.round(100 * score/questions.length);
+    var userScore = Math.round(100 * score/questions.length);
 
-    scoreContent.textContent = 'You scored ' + scorePerCent +'%!';
-
-    scorePerCent = userScore;
+    scoreContent.textContent = 'You scored ' + userScore +'%!';
 
     console.log(userScore);
 }
@@ -169,7 +167,7 @@ submitBtn.addEventListener('click', function(event) {
 
   var user = {
     userName: userName.value.trim(),
-    score: userScore
+    score: userScore.toString()
   };
 
   console.log(user);
