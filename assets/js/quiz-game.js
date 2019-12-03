@@ -58,6 +58,7 @@ var start = document.getElementById('start-btn'),
     highScoreDiv = document.getElementById('high-score-container')
     runningQuestion = 0,
     count = 0,
+    users = [];
     questionTime = 10, // 10s
     lastQuestion = questions.length - 1;
     gaugeWidth = 150, // 150px
@@ -66,6 +67,7 @@ var start = document.getElementById('start-btn'),
 let TIMER;
 
 start.addEventListener("click",startQuiz);
+users = JSON.parse(localStorage.getItem('users'));
 
 // start quiz
 function startQuiz(){
@@ -150,17 +152,20 @@ function answerIsWrong(){
 }
 
 // score render
-function scoreRender(){
+function scoreRender(userscore){
     quiz.classList.add('d-none');
     scoreDiv.classList.remove('d-none');
 
     // calculate the amount of question percent answered by the user
-    var userScore = Math.round(100 * score/questions.length);
+    userScore =  Math.round(100 * score/questions.length);
+
+    // return userScore;
 
     scoreContent.textContent = 'You scored ' + userScore +'%!';
 
     console.log(userScore);
 }
+
 
 submitBtn.addEventListener('click', function(event) {
   event.prevendDefault;
@@ -172,8 +177,14 @@ submitBtn.addEventListener('click', function(event) {
 
   console.log(user);
 
-  // localStorage.setItem(userName, scorePerCent);
+  users.push(user);
+  localStorage.setItem('users', JSON.stringify(user));
   scoreDiv.classList.add('d-none');
   highScoreDiv.classList.remove('d-none');
-
-})
+  var highScoreList = document.querySelector('ul');
+  for (var i = 0; i < users.length; i++){
+    var li = document.createElement('li');
+    li.textContent = `${users[i].userName}-${users[i].score}`;
+    highScorelist.append(li);
+  }
+});
