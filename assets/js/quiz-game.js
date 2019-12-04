@@ -58,7 +58,7 @@ var start = document.getElementById('start-btn'),
     highScoreDiv = document.getElementById('high-score-container')
     runningQuestion = 0,
     count = 0,
-    users = [];
+    users = [],
     questionTime = 10, // 10s
     lastQuestion = questions.length - 1;
     gaugeWidth = 150, // 150px
@@ -67,7 +67,9 @@ var start = document.getElementById('start-btn'),
 let TIMER;
 
 start.addEventListener("click",startQuiz);
-users = JSON.parse(localStorage.getItem('users'));
+if (localStorage.getItem('users')){
+  users = JSON.parse(localStorage.getItem('users'));
+}
 
 // start quiz
 function startQuiz(){
@@ -177,14 +179,28 @@ submitBtn.addEventListener('click', function(event) {
 
   console.log(user);
 
+  console.log(users);
+
   users.push(user);
-  localStorage.setItem('users', JSON.stringify(user));
+
+  // users.sort(function(a, b) {
+  //   return parseFloat(a.score) - parseFloat(b.score);
+  // });
+
+  localStorage.setItem('users', JSON.stringify(users));
+
   scoreDiv.classList.add('d-none');
+
   highScoreDiv.classList.remove('d-none');
-  var highScoreList = document.querySelector('ul');
+
   for (var i = 0; i < users.length; i++){
+
+    var highScoreList = document.querySelector('ul');
+
     var li = document.createElement('li');
+
     li.textContent = `${users[i].userName}-${users[i].score}`;
-    highScorelist.append(li);
+
+    highScoreList.append(li);
   }
 });
