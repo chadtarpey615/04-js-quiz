@@ -1,6 +1,9 @@
 
 body {
   background-image: url('http://www.4usky.com/data/out/85/164770942-solo-wallpapers.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 1.5rem;
 }
 
@@ -85,7 +88,7 @@ body {
     margin-right : 5px;
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 480px){
   .h-75 {
     height: auto !important;
   }

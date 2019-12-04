@@ -173,7 +173,7 @@ submitBtn.addEventListener('click', function(event) {
   event.prevendDefault;
 
   var user = {
-    userName: userName.value.trim(),
+    userName: userName.value.trim().toUpperCase(),
     score: userScore.toString()
   };
 
@@ -199,7 +199,7 @@ submitBtn.addEventListener('click', function(event) {
 
     var li = document.createElement('li');
 
-    li.textContent = `${users[i].userName}-${users[i].score}`;
+    li.textContent = `${users[i].userName}: ${users[i].score}`;
 
     highScoreList.append(li);
   }
