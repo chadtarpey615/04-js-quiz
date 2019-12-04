@@ -42,7 +42,7 @@ body {
 }
 
 #timer{
-    position: absolute;
+    /* position: absolute; */
     height : 100px;
     width : 200px;
     bottom : 0px;
