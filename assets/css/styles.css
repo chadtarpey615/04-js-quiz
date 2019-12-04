@@ -89,6 +89,7 @@ body {
 ul {
   width: 50%;
   margin: 0 auto;
+  padding: 0;
 }
 
 li {
@@ -105,7 +106,7 @@ li {
 @media screen and (max-width: 575px){
 
   .justify-content-between {
-    /* justify-content: center !important; */
+    justify-content: center !important;
   }
 
   .h-25 {
