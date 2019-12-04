@@ -88,12 +88,45 @@ body {
     margin-right : 5px;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 575px){
+
+  #timer {
+    bottom: 0;
+  }
+  .h-25 {
+    height: 35% !important;
+  }
   .h-75 {
     height: auto !important;
   }
 
   .choice-col {
+    margin-bottom: 1rem;
+  }
+
+  .question-row {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  #timer {
+    bottom: 0;
+  }
+
+  .h-25 {
+    height: 35% !important;
+  }
+  .h-75 {
+    height: auto !important;
+  }
+
+  .choice-col {
+    margin-bottom: 1rem;
+  }
+
+  .question-row {
     margin-bottom: 1rem;
   }
 }
