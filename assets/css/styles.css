@@ -45,7 +45,7 @@ body {
     /* position: absolute; */
     height : 100px;
     width : 200px;
-    bottom : 0px;
+    /* bottom : 0px; */
     text-align: center;
 }
 
@@ -70,12 +70,10 @@ body {
 }
 
 #progress{
-    width : 500px;
-    position: absolute;
-    bottom : 0px;
-    right : 0px;
-    padding:5px;
-    text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
 }
 
 .prog{
@@ -90,9 +88,6 @@ body {
 
 @media screen and (max-width: 575px){
 
-  #timer {
-    bottom: 0;
-  }
   .h-25 {
     height: 35% !important;
   }
@@ -110,10 +105,6 @@ body {
 }
 
 @media screen and (max-width: 480px){
-
-  #timer {
-    bottom: 0;
-  }
 
   .h-25 {
     height: 35% !important;
