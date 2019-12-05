@@ -2,6 +2,8 @@
 
 As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment. These assessments are typically a combination of multiple-choice questions and interactive challenges. In this homework assignment, your challenge is to build a code quiz with multiple-choice questions.
 
+See the deployed prototype [here](https://travis-john.github.io/unc-homework-04/).
+
 
 ## Instructions
 
