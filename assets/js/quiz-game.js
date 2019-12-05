@@ -53,13 +53,13 @@ quiz = document.getElementById('quiz-container'),
   submitBtn = document.getElementById('submit-score'),
   userName = document.getElementById('user-name'),
   userScore = 0,
-  highScoreDiv = document.getElementById('high-score-container')
-runningQuestion = 0,
+  highScoreDiv = document.getElementById('high-score-container'),
+  runningQuestion = 0,
   count = 0,
   users = [],
   questionTime = 10, // 10s
-  lastQuestion = questions.length - 1;
-gaugeWidth = 150, // 150px
+  lastQuestion = questions.length - 1,
+  gaugeWidth = 150, // 150px
   gaugeUnit = gaugeWidth / questionTime,
   score = 0;
 let TIMER;
