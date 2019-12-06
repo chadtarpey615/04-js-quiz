@@ -38,30 +38,30 @@ var questions = [{
 
 // global variables
 var start = document.getElementById('start-btn'),
-  startContainer = document.getElementById('start-container');
-quiz = document.getElementById('quiz-container'),
-  question = document.getElementById('question'),
-  qImg = document.getElementById('quiz-img'),
-  choiceA = document.getElementById('choice-a'),
-  choiceB = document.getElementById('choice-b'),
-  choiceC = document.getElementById('choice-c'),
-  counter = document.getElementById('counter'),
-  timeGauge = document.getElementById('timeGauge'),
-  progress = document.getElementById('progress'),
-  scoreDiv = document.getElementById('score'),
-  scoreContent = document.getElementById('score-content'),
-  submitBtn = document.getElementById('submit-score'),
-  userName = document.getElementById('user-name'),
-  userScore = 0,
-  highScoreDiv = document.getElementById('high-score-container'),
-  runningQuestion = 0,
-  count = 0,
-  users = [],
-  questionTime = 10, // 10s
-  lastQuestion = questions.length - 1,
-  gaugeWidth = 150, // 150px
-  gaugeUnit = gaugeWidth / questionTime,
-  score = 0;
+    startContainer = document.getElementById('start-container'),
+    quiz = document.getElementById('quiz-container'),
+    question = document.getElementById('question'),
+    qImg = document.getElementById('quiz-img'),
+    choiceA = document.getElementById('choice-a'),
+    choiceB = document.getElementById('choice-b'),
+    choiceC = document.getElementById('choice-c'),
+    counter = document.getElementById('counter'),
+    timeGauge = document.getElementById('timeGauge'),
+    progress = document.getElementById('progress'),
+    scoreDiv = document.getElementById('score'),
+    scoreContent = document.getElementById('score-content'),
+    submitBtn = document.getElementById('submit-score'),
+    userName = document.getElementById('user-name'),
+    userScore = 0,
+    highScoreDiv = document.getElementById('high-score-container'),
+    runningQuestion = 0,
+    count = 0,
+    users = [],
+    questionTime = 10, // 10s
+    lastQuestion = questions.length - 1,
+    gaugeWidth = 150, // 150px
+    gaugeUnit = gaugeWidth / questionTime,
+    score = 0;
 let TIMER;
 
 start.addEventListener("click", startQuiz);
